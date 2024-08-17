@@ -46,3 +46,10 @@ stages:
     - model_training.criterion
     metrics:
     - metrics.json
+metrics:
+- dvclive/metrics.json
+plots:
+- dvclive/plots/metrics:
+    x: step
+params:
+- dvclive/params.yaml

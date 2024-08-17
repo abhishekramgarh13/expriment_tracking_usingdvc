@@ -38,8 +38,8 @@ with Live(save_dvc_exp=True) as live:
     live.log_metric('recall',recall)
     live.log_metric('f1',f1)
 
-    for param, value in params.item():
-        for key, val in value.item():
+    for param, value in params.items():
+        for key, val in value.items():
             live.log_param(f'{param}_{key}',value)
 
 # Save metrics to a JSON file for compatibility  with DVC

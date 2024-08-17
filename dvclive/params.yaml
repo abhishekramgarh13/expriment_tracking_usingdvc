@@ -1,0 +1,10 @@
+feature_engineering_n_components:
+  n_components: 2
+model_training_n_estimators: &id001
+  n_estimators: 16
+  max_depth: 20
+  bootstrap: true
+  criterion: entropy
+model_training_max_depth: *id001
+model_training_bootstrap: *id001
+model_training_criterion: *id001

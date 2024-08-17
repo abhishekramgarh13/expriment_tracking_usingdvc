@@ -34,10 +34,10 @@ X_train_pca = pca.fit_transform(X_train_scaled)
 X_test_pca = pca.transform(X_test_scaled)
 
 #combine processed features and target
-train_processed = pd.DataFrame(X_train_pca, columns=[f'PC{i+1}' for i in range(3)])
+train_processed = pd.DataFrame(X_train_pca, columns=[f'PC{i+1}' for i in range(2)])
 train_processed['Placed'] = y_train.reset_index(drop=True)
 
-test_processed = pd.DataFrame(X_test_pca, columns=[f'PC{i+1}' for i in range(3)])
+test_processed = pd.DataFrame(X_test_pca, columns=[f'PC{i+1}' for i in range(2)])
 test_processed['Placed'] = y_test.reset_index(drop=True)
 
 # save processed data
